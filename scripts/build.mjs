@@ -190,6 +190,12 @@ const JSONLD = {
         alumniOf: { '@type': 'CollegeOrUniversity', name: 'Baylor University' },
         worksFor: { '@id': `${SITE}/#organization` },
       },
+      {
+        '@type': 'Person',
+        name: 'Larry Oldham',
+        jobTitle: 'Associated Global Partner',
+        worksFor: { '@id': `${SITE}/#organization` },
+      },
       organization,
     ],
   },
@@ -253,7 +259,6 @@ const urls = pages
 writeFileSync(join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
 writeFileSync(join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
-const portraits = ['thana-balan-j', 'thomas-kelly'].map((id) => `${id}: ${findPortrait(id) ? 'photo' : 'pending (fallback panel)'}`);
-console.log(`Built ${written.length} pages for ${SITE}: ${written.join(', ')}`);
+const portraits = ['thana-balan-j', 'thomas-kelly', 'larry-oldham'].map((id) => `${id}: ${findPortrait(id) ? 'photo' : 'pending (fallback panel)'}`);console.log(`Built ${written.length} pages for ${SITE}: ${written.join(', ')}`);
 console.log(`Enquiry form: ${accessKey ? 'enabled' : 'no WEB3FORMS_ACCESS_KEY (visitors are directed to email and phone)'}`);
 console.log(`Portraits: ${portraits.join('; ')}`);
