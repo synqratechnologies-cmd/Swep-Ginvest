@@ -4113,3 +4113,92 @@ html.is-leaving main {
     clip-path: none !important;
   }
 }
+
+/* ==========================================================================
+   Partner Logos & Showcase Grid
+   ========================================================================== */
+.partner-showcase {
+  margin-top: clamp(3rem, 6vw, 5.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  border-bottom: 1px solid var(--rule);
+}
+
+.partner-showcase__label {
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.25rem;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 8.5rem;
+  padding: 1.5rem 1.25rem;
+  background: rgba(18, 18, 16, 0.65);
+  border: 1px solid rgba(241, 237, 229, 0.12);
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: border-color var(--dur-fast) var(--ease),
+              background-color var(--dur-fast) var(--ease),
+              transform var(--dur-fast) var(--ease);
+}
+
+.partner-card:hover {
+  border-color: var(--brass);
+  background: rgba(26, 26, 23, 0.85);
+  transform: translateY(-2px);
+}
+
+.partner-card__logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 3rem;
+}
+
+.partner-card__logo {
+  max-width: 100%;
+  max-height: 2.75rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1) opacity(0.8);
+  transition: filter var(--dur-fast) var(--ease);
+}
+
+.partner-card:hover .partner-card__logo {
+  filter: brightness(0) invert(1) opacity(1);
+}
+
+.partner-card__fallback {
+  display: none; /* Only displayed by inline onerror handler if the image is missing */
+  font-family: var(--font-serif);
+  font-size: var(--fs-h4);
+  font-weight: 400;
+  color: var(--text-on-dark);
+}
+
+.partner-card__sub {
+  margin-top: 1rem;
+  font-size: var(--fs-caption);
+  letter-spacing: 0.02em;
+  color: var(--fg-faint);
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.partner-card:hover .partner-card__sub {
+  color: var(--brass);
+}
+
+@media (min-width: 64em) {
+  .partner-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
