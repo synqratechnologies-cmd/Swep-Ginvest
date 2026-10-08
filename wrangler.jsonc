@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "swep-ginvest",
+  "compatibility_date": "2026-10-08",
+  "assets": {
+    "directory": ".",
+    "exclude": [
+      "node_modules/**",
+      ".git/**",
+      ".env",
+      ".env.*",
+      "wrangler.jsonc",
+      "package-lock.json"
+    ]
+  }
+}
