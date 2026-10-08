@@ -1,0 +1,10 @@
+# Local environment (holds the Web3Forms access key)
+.env
+.env.*
+!.env.example
+
+node_modules/
+.DS_Store
+Thumbs.db
+
+config.js

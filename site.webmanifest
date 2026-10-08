@@ -1,0 +1,13 @@
+{
+  "name": "South West Energy Partners",
+  "short_name": "SWEP",
+  "description": "Global Energy. Strategic Capital. Long-Term Value.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#141412",
+  "theme_color": "#141412",
+  "icons": [
+    { "src": "assets/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/brand/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
