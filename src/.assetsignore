@@ -1,0 +1,13 @@
+node_modules
+.git
+.github
+.env
+.env.*
+src
+scripts
+package.json
+package-lock.json
+README.md
+CREDITS.md
+wrangler.jsonc
+wrangler.toml
