@@ -1,7 +1,7 @@
-{
-  "name": "swep-website",
+﻿{
+  "name": "swep-ginvest",
   "compatibility_date": "2024-09-23",
   "assets": {
-    "directory": "."
+    "directory": "./dist"
   }
 }

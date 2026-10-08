@@ -1,17 +1,17 @@
-{
-  "name": "swep-website",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Corporate website for South West Energy Partners LLC (SWEP).",
-  "type": "module",
-  "scripts": {
-    "build": "node scripts/build.mjs",
-    "start": "node scripts/serve.mjs"
-  },
-  "devDependencies": {
-    "wrangler": "^3.0.0"
-  },
-  "engines": {
-    "node": ">=18"
-  }
+﻿{
+    "name":  "swep-website",
+    "version":  "1.0.0",
+    "private":  true,
+    "description":  "Corporate website for South West Energy Partners LLC (SWEP).",
+    "type":  "module",
+    "scripts":  {
+                    "build":  "node scripts/build.mjs \u0026\u0026 node scripts/export-dist.mjs",
+                    "start":  "node scripts/serve.mjs"
+                },
+    "devDependencies":  {
+                            "wrangler":  "^3.0.0"
+                        },
+    "engines":  {
+                    "node":  "\u003e=18"
+                }
 }
